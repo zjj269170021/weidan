@@ -46,11 +46,33 @@ Page({
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
+    //添加用户
     addUser: function() {
         wx.navigateTo({
             url: '/pages/dinghuo/adduser/adduser',
             success: function(res) {
                 // success
+            },
+            fail: function() {
+                // fail
+            },
+            complete: function() {
+                // complete
+            }
+        })
+    },
+    //添加订单
+    addDingdan: function(e) {
+        let title = `${this.data.userInfoList[e.currentTarget.dataset.index].name}的订单`;
+        wx.navigateTo({
+            url: '/pages/dinghuo/adddingdan/adddingdan',
+            success: function(res) {
+                wx.setNavigationBarTitle({
+                    title: title,
+                    success: function(res) {
+                        // success
+                    }
+                })
             },
             fail: function() {
                 // fail

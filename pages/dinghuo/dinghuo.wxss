@@ -1,37 +1,21 @@
 /**dinghuo.wxss**/
-.search-bg {
-  padding: 0 24rpx;
-  background: #5b616f;
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 80rpx;
-  z-index: 2;
-}
-.search-bg .search-icon {
+.head-bg .search-icon {
   z-index: 2;
   position: absolute;
   top: 16rpx;
   padding-left: 10px;
   background: #525764;
 }
-.search-bg .search-input {
+.head-bg .search-input {
   border-radius: 5px;
   background: #525764;
   height: 50rpx;
   padding: 0 0 0 30px;
   font-size: 30rpx;
 }
-.search-bg .search-placeholder {
+.head-bg .search-placeholder {
   color: #919196;
   font-size: 30rpx;
-}
-.body-bg {
-  position: absolute;
-  top: 80rpx;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 .body-bg .title {
   position: fixed;

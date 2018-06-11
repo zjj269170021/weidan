@@ -1,4 +1,4 @@
-<view class="search-bg">
+<view class="head-bg">
     <input class="search-input" placeholder="搜索" placeholder-class="search-placeholder"></input>
     <icon class="search-icon" size="12" type="search"></icon>
 </view>
@@ -8,7 +8,7 @@
         <button class="btn-add-user" bindtap="addUser" type="primary" size="mini">新增客户</button>
     </view>
     <view class="list">
-        <view class="user-info" wx:for="{{userInfoList}}" wx:for-item="userInfo" wx:key="id">
+        <view class="user-info" bindtap="addDingdan" data-index="{{index}}" wx:for="{{userInfoList}}" wx:for-item="userInfo" wx:key="id">
             <image class="img-edit" src="../../images/xcx_edit_off.png"></image>
             <text class="user-name">{{userInfo.name}}</text>
             <text class="user-tel">{{userInfo.tel}}</text>

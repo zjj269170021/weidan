@@ -4,7 +4,8 @@
 		"pages/dingdan/dingdan",
 		"pages/wode/wode",
 		"pages/logs/logs",
-		"pages/dinghuo/adduser/adduser"
+		"pages/dinghuo/adduser/adduser",
+		"pages/dinghuo/adddingdan/adddingdan"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

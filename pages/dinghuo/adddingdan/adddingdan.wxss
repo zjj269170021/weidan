@@ -1,0 +1,18 @@
+.head-bg .all-pifa {
+  position: fixed;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  font-size: 30rpx;
+  line-height: 56rpx;
+}
+.head-bg .pifa {
+  margin-left: 116rpx;
+  width: -16%;
+  overflow-x: scroll;
+  word-break: keep-all;
+}
+.head-bg .pifa text {
+  margin-right: 24rpx;
+  color: #a3a9b6;
+  font-size: 30rpx;
+}

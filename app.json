@@ -1,11 +1,11 @@
 {
 	"pages": [
+		"pages/dinghuo/adddingdan/adddingdan",
 		"pages/dinghuo/dinghuo",
 		"pages/dingdan/dingdan",
 		"pages/wode/wode",
 		"pages/logs/logs",
-		"pages/dinghuo/adduser/adduser",
-		"pages/dinghuo/adddingdan/adddingdan"
+		"pages/dinghuo/adduser/adduser"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
@@ -17,7 +17,7 @@
 	"tabBar": {
 		"list": [
 			{
-				"pagePath": "pages/dinghuo/dinghuo",
+				"pagePath": "pages/dinghuo/adddingdan/adddingdan",
 				"text": "订货",
 				"iconPath": "images/xcx_nav01_off.png",
 				"selectedIconPath": "images/xcx_nav01_on.png"

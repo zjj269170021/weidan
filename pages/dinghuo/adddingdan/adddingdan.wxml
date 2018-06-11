@@ -1,1 +1,8 @@
-<view>aaa</view>
+<view class="head-bg">
+    <view class="all-pifa">全部</view>
+    <view class="pifa">
+        <text class="">新风水果批发行</text>
+        <text class="">高翔弄副批发行</text>
+        <text class="">郭太师西瓜批发行</text>
+    </view>
+</view>

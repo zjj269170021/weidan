@@ -1,0 +1,18 @@
+<view class="search-bg">
+    <input class="search-input" placeholder="搜索" placeholder-class="search-placeholder"></input>
+    <icon class="search-icon" size="12" type="search"></icon>
+</view>
+<view class="body-bg">
+    <view class="title">
+        <text class="tip">请新增或选择一个用户开始创建账单</text>
+        <button class="btn-add-user" bindtap="addUser" type="primary" size="mini">新增客户</button>
+    </view>
+    <view class="list">
+        <view class="user-info" wx:for="{{userInfoList}}" wx:for-item="userInfo" wx:key="id">
+            <image class="img-edit" src="../../images/xcx_edit_off.png"></image>
+            <text class="user-name">{{userInfo.name}}</text>
+            <text class="user-tel">{{userInfo.tel}}</text>
+            <view class="user-addr">{{userInfo.addr}}</view>
+        </view>
+    </view>
+</view>

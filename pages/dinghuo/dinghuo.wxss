@@ -1,0 +1,85 @@
+/**dinghuo.wxss**/
+.search-bg {
+  padding: 0 24rpx;
+  background: #5b616f;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 80rpx;
+  z-index: 2;
+}
+.search-bg .search-icon {
+  z-index: 2;
+  position: absolute;
+  top: 16rpx;
+  padding-left: 10px;
+  background: #525764;
+}
+.search-bg .search-input {
+  border-radius: 5px;
+  background: #525764;
+  height: 50rpx;
+  padding: 0 0 0 30px;
+  font-size: 30rpx;
+}
+.search-bg .search-placeholder {
+  color: #919196;
+  font-size: 30rpx;
+}
+.body-bg {
+  position: absolute;
+  top: 80rpx;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.body-bg .title {
+  position: fixed;
+  left: 24rpx;
+  right: 24rpx;
+  height: 100rpx;
+  z-index: 2;
+  background: #efeff4;
+}
+.body-bg .title .tip {
+  position: absolute;
+  top: 24rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #77777a;
+}
+.body-bg .title .btn-add-user {
+  position: absolute;
+  top: 24rpx;
+  right: 0;
+}
+.body-bg .list {
+  top: 100rpx;
+  padding: 24rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.body-bg .list .user-info {
+  background: #fff;
+  margin-bottom: 20rpx;
+  border-radius: 5px;
+  padding: 24rpx;
+}
+.body-bg .list .user-info .img-edit {
+  width: 36rpx;
+  height: 36rpx;
+}
+.body-bg .list .user-info .user-name {
+  margin-left: 24rpx;
+}
+.body-bg .list .user-info .user-tel {
+  margin-left: 24rpx;
+  font-size: 30rpx;
+  color: #77777a;
+}
+.body-bg .list .user-info .user-addr {
+  font-size: 30rpx;
+  color: #77777a;
+  margin-top: 24rpx;
+}

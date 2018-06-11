@@ -1,0 +1,21 @@
+<import src="../../../template/pickerarea/pickerarea.wxml" />
+<view class="add-bg">
+    <view class="user">
+        <text class="tip">联系人：</text>
+        <input placeholder="请添加联系人姓名" bindinput="nameInput"></input>
+    </view>
+    <view class="tel">
+        <text class="tip">手机号码：</text>
+        <input placeholder="请添加11位手机号" bindinput="telInput"></input>
+    </view>
+    <view class="area">
+        <text class="tip">选择地区：</text>
+        <input disabled="true" placeholder="请选择地区信息" bindtap="selArea" value="{{area}}"></input>
+    </view>
+    <view class="addr">
+        <text class="tip">详细地址：</text>
+        <input placeholder="请填写街道门牌信息等" bindinput="addrInput"></input>
+    </view>
+</view>
+<button class="do-add-user" bindtap="doAddUser" type="primary">完成</button>
+<template is="areaData" data="{{...item}}" />

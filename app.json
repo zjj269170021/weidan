@@ -1,0 +1,45 @@
+{
+	"pages": [
+		"pages/dinghuo/dinghuo",
+		"pages/dingdan/dingdan",
+		"pages/wode/wode",
+		"pages/logs/logs",
+		"pages/dinghuo/adduser/adduser"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#5b616f",
+		"navigationBarTitleText": "订货",
+		"navigationBarTextStyle": "white",
+		"backgroundColor":"#efeff4"
+	},
+	"tabBar": {
+		"list": [
+			{
+				"pagePath": "pages/dinghuo/dinghuo",
+				"text": "订货",
+				"iconPath": "images/xcx_nav01_off.png",
+				"selectedIconPath": "images/xcx_nav01_on.png"
+			},
+			{
+				"pagePath": "pages/dingdan/dingdan",
+				"text": "订单",
+				"iconPath": "images/xcx_nav02_off.png",
+				"selectedIconPath": "images/xcx_nav02_on.png"
+			},
+			{
+				"pagePath": "pages/wode/wode",
+				"text": "我的",
+				"iconPath": "images/xcx_nav03_off.png",
+				"selectedIconPath": "images/xcx_nav03_on.png"
+			}			
+		],
+		"selectedColor": "#0597ff"
+
+	},
+	"networkTimeout": {
+		"request": 10000,
+		"downloadFile": 10000
+	},
+	"debug": true
+}

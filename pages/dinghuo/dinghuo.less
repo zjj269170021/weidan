@@ -1,0 +1,109 @@
+/**dinghuo.wxss**/
+@import "../../common/common.less";
+
+//搜索区域背景
+.search-bg {
+    padding: 0 @pd-s;
+    background: #5b616f;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: @size * 40;
+    z-index: 2;
+    //搜索图标
+    .search-icon {
+        z-index: 2;
+        position: absolute;
+        top: @size * 8;
+        padding-left: 10px;
+        background: #525764;
+    }
+    //搜索输入框
+    .search-input {
+        border-radius: @bdrs;
+        background: #525764;
+        height: @size * 25;
+        padding: 0 0 0 30px;
+        font-size: @fs-s;
+    }
+    //搜索输入框默认文本
+    .search-placeholder {
+        color: #919196;
+        font-size: @fs-s;
+    }
+}
+//
+.body-bg {
+    position: absolute;
+    top: @size * 40;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // overflow: inherit;
+    //头部
+    .title {
+        position: fixed;
+        left: @pd-s;
+        right: @pd-s;
+        height: @size * 50;
+        // padding: 0 @pd-s;
+        z-index: 2;
+        background: #efeff4;
+        //提示
+        .tip {
+            position: absolute;
+            top: @pd-s;
+            line-height: @size * 30;
+            font-size: @fs-s;
+            color: @fl-hui;
+        }
+        //新增客户按钮
+        .btn-add-user {
+            position: absolute;
+            top: @pd-s;
+            right: 0;
+            // background: #1bac19;
+            // color: #fff;
+            // height: @size * 40;
+            // line-height: @size * 40;
+            // font-size: @fs-m;
+        }
+    }
+    //客户列表区域
+    .list {
+        position: absolute;
+        top: @size * 50;
+        padding: @pd-s;
+        position: absolute;
+        left: 0;
+        right: 0;
+        //客户信息框
+        .user-info {
+            background: #fff;
+            margin-bottom: @size * 10;
+            border-radius: @bdrs;
+            padding: @pd-s;
+            //编辑图片
+            .img-edit {
+                width: @size * 18;
+                height: @size * 18;
+            }
+            //名字
+            .user-name {
+                margin-left: @pd-s;
+            }
+            //号码
+            .user-tel {
+                margin-left: @pd-s;
+                font-size: @fs-s;
+                color: @fl-hui;
+            }
+            //地址
+            .user-addr {
+                font-size: @fs-s;
+                color: @fl-hui;
+                margin-top: @pd-s;
+            }
+        }
+    }
+}

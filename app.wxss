@@ -26,3 +26,11 @@ page {
   bottom: 0;
   left: 0;
 }
+.foot-bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 160rpx;
+  background: #dee2e6;
+}

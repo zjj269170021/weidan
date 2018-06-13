@@ -1,18 +1,134 @@
-.head-bg .all-pifa {
-  position: fixed;
-  color: #fff;
-  border-bottom: 2px solid #fff;
+.head-bg {
   font-size: 30rpx;
   line-height: 56rpx;
 }
-.head-bg .pifa {
-  margin-left: 116rpx;
-  width: -16%;
-  overflow-x: scroll;
-  word-break: keep-all;
+.head-bg .all {
+  position: absolute;
+  color: #a3a9b6;
 }
-.head-bg .pifa text {
+.head-bg .all.sel {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+.head-bg .top-item-list {
+  margin-left: 116rpx;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.head-bg .top-item-list .item {
+  display: inline-block;
   margin-right: 24rpx;
   color: #a3a9b6;
+}
+.head-bg .top-item-list .item.sel {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+.body-bg {
+  bottom: 160rpx;
+}
+.body-bg .left-item-list,
+.body-bg .right-item-list {
+  display: inline-block;
+  height: 100%;
+}
+.body-bg .left-item-list {
+  width: 116rpx;
+  background: #f0f0f3;
+  color: #77777a;
+}
+.body-bg .left-item-list .item {
+  padding: 24rpx;
+  height: 12px;
+  line-height: 12px;
   font-size: 30rpx;
+}
+.body-bg .left-item-list .item.sel {
+  color: #0597ff;
+}
+.body-bg .right-item-list {
+  width: auto;
+  position: absolute;
+  left: 116rpx;
+  right: 0;
+  background: #fff;
+}
+.body-bg .right-item-list .item {
+  position: relative;
+  padding: 24rpx;
+  height: 272rpx;
+  border-bottom: 1px solid #ebebeb;
+}
+.body-bg .right-item-list .item .pic {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 5px;
+  background: red;
+}
+.body-bg .right-item-list .item > text {
+  position: absolute;
+  left: 198rpx;
+}
+.body-bg .right-item-list .item > image {
+  position: absolute;
+}
+.body-bg .right-item-list .item .tag {
+  top: 80rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 12rpx;
+  font-size: 24rpx;
+  border-radius: 5px;
+}
+.body-bg .right-item-list .item .tag.level-a {
+  background: red;
+  color: #fff;
+}
+.body-bg .right-item-list .item .shoujia {
+  top: 130rpx;
+  color: #d8243c;
+}
+.body-bg .right-item-list .item .jinjia {
+  left: 358rpx;
+  top: 136rpx;
+  font-size: 30rpx;
+}
+.body-bg .right-item-list .item .shangjia {
+  top: 200rpx;
+  font-size: 24rpx;
+  color: #77777a;
+}
+.body-bg .right-item-list .item .shangjia .tag {
+  display: inline-block;
+  background: #fff1ee;
+  border: 1 solid #e6b8bd;
+  color: #e6b8bd;
+  margin-right: 24rpx;
+  padding: 0 8rpx;
+  border-radius: 5px;
+}
+.body-bg .right-item-list .item .beizhu {
+  top: 250rpx;
+  font-size: 24rpx;
+  color: #77777a;
+}
+.body-bg .right-item-list .item .beizhu .tag {
+  background: #fffdeb;
+  border: 1 solid #eed9bf;
+  color: #eed9bf;
+  margin-right: 24rpx;
+  padding: 0 8rpx;
+  border-radius: 5px;
+}
+.body-bg .right-item-list .item .add {
+  width: 60rpx;
+  height: 60rpx;
+  top: 70rpx;
+  right: 24rpx;
+}
+.body-bg .right-item-list .item .edit {
+  width: 32rpx;
+  height: 32rpx;
+  right: 38rpx;
+  bottom: 24rpx;
 }

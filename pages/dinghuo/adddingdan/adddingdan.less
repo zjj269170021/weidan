@@ -1,21 +1,138 @@
 @import "../../../common/common.less";
 .head-bg{
-    .all-pifa{
-        position: fixed;
+    font-size: @fs-s;
+    line-height: 56rpx;
+    .all{
+        position: absolute;
+        color: #a3a9b6;
+    }
+    .all.sel{
         color: #fff;
         border-bottom: 2px solid #fff;
-        font-size: @fs-s;
-        line-height: 56rpx;
     }
-    .pifa{
+    .top-item-list{
         margin-left: @size * 58;
-        width: 100% - @size * 58;
         overflow-x: scroll;
-        word-break: keep-all;
-        text{
+        white-space: nowrap;
+        .item{
+            display: inline-block;
             margin-right: @pd-s;  
             color: #a3a9b6;
+        }
+        .item.sel{
+            color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+    }
+}
+.body-bg{
+    bottom: @size * 80;
+    .left-item-list,
+    .right-item-list{
+        display: inline-block;
+        height: 100%;
+    }
+    .left-item-list{
+        width: @size * 58;
+        background: #f0f0f3;
+        color: #77777a;
+        .item{
+            padding: @pd-s;
+            height: 36px - @pd-s;
+            line-height: 36px - @pd-s;
             font-size: @fs-s;
+        }
+        .item.sel{
+            color: #0597ff;
+        }
+    }
+    .right-item-list{
+        width:auto;
+        position: absolute;
+        left: @size * 58;
+        right: 0;
+        background: #fff;
+        .item{
+            position: relative;
+            padding: @pd-s;
+            height: @size * 136;
+            border-bottom: 1px solid #ebebeb;
+            .pic{
+                width: @size * 75;
+                height: @size * 75;
+                border-radius: @bdrs; 
+                background: red;
+            }
+            >text{
+                position: absolute;
+                left: @pd-s + @size * 75 + @pd-s;
+            } 
+            >image{
+                position: absolute;
+            }
+            .name{
+                
+            }
+            .tag{
+                top: @size * 40;
+                height: @size * 20;
+                line-height: @size * 20;
+                padding: 0 @size * 6; 
+                font-size: @fs-xs;
+                border-radius: @bdrs;
+            }
+            .tag.level-a{
+                background: red;
+                color: #fff;
+            }
+            .shoujia{
+                top: @size * 65;
+                color: #d8243c;
+            }
+            .jinjia{
+                left: @pd-s + @size * 75 + @pd-s + @size * 80;
+                top: @size * 68;
+                font-size: @fs-s;
+            }
+            .shangjia{
+                top: @size * 100; 
+                font-size: @fs-xs;
+                color: @fl-hui;
+                .tag{
+                    display: inline-block;
+                    background: #fff1ee;
+                    border: 1 solid #e6b8bd;
+                    color: #e6b8bd;
+                    margin-right: @pd-s;
+                    padding: 0 @size * 4;
+                    border-radius: @bdrs;
+                }
+            }
+            .beizhu{
+                top: @size * 125;
+                font-size: @fs-xs;
+                color: @fl-hui;
+                .tag{
+                    background: #fffdeb;
+                    border: 1 solid #eed9bf;
+                    color: #eed9bf;
+                    margin-right: @pd-s;
+                    padding: 0 @size * 4;
+                    border-radius: @bdrs;
+                }
+            }
+            .add{
+                width: @size * 30;
+                height: @size * 30;
+                top: @size * 35;
+                right: @pd-s;
+            }
+            .edit{
+                width: @size * 16;
+                height: @size * 16;
+                right: @pd-s + @size * 7;
+                bottom: @pd-s;
+            }
         }
     }
 }

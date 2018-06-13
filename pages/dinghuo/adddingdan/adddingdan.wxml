@@ -1,8 +1,29 @@
 <view class="head-bg">
-    <view class="all-pifa">全部</view>
-    <view class="pifa">
-        <text class="">新风水果批发行</text>
-        <text class="">高翔弄副批发行</text>
-        <text class="">郭太师西瓜批发行</text>
+    <view class="all sel">全部</view>
+    <view class="top-item-list">
+        <text class="item sel">新风水果批发行</text>
+        <text class="item">高翔弄副批发行</text>
+        <text class="item">郭太师西瓜批发行</text>
     </view>
+</view>
+<view class="body-bg">
+    <scroll-view class="left-item-list" scroll-y>
+        <view class="item {{index == 0 ? 'sel' : ''}}" wx:for="{{leftItemList}}" wx:for-item="item" wx:key="id">{{item.name}}</view>
+    </scroll-view>
+    <scroll-view class="right-item-list" scroll-y>
+        <view class="item" wx:for="{{rightItemList}}" wx:for-item="item" wx:key="id">
+            <image lazy-load="true" class="pic"></image>
+            <text class="name">{{item.name}}</text>
+            <text class="tag level-a">库存不足</text>
+            <text class="shoujia">￥10.0</text>
+            <text class="jinjia">进价￥7.6</text>
+            <text class="shangjia"><text class="tag">商家</text>新风水果批发行</text>
+            <text class="beizhu"><text class="tag">备注</text>5斤起批</text>
+            <image class="add" src="../../../images/xcx_cart_add.png"></image>
+            <image class="edit" src="../../../images/xcx_edit_on.png"></image>
+        </view>
+    </scroll-view>
+</view>
+<view class="foot-bg">
+
 </view>

@@ -132,3 +132,56 @@
   right: 38rpx;
   bottom: 24rpx;
 }
+.foot-bg {
+  padding: 24rpx;
+}
+.foot-bg .gouwuche {
+  position: relative;
+}
+.foot-bg .gouwuche > image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.foot-bg .gouwuche > .on {
+  display: none;
+}
+.foot-bg .gouwuche .number {
+  position: absolute;
+  left: 60rpx;
+  top: 0;
+  width: 52rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  background: #72778a;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 30rpx;
+}
+.foot-bg .gouwuche.rich > .on {
+  display: inherit;
+}
+.foot-bg .gouwuche.rich > .off {
+  display: none;
+}
+.foot-bg .gouwuche.rich .number {
+  background: #d8243c;
+}
+.foot-bg .shoujia-all {
+  position: absolute;
+  top: 24rpx;
+  left: 180rpx;
+  color: #d8243c;
+  font-size: 42rpx;
+}
+.foot-bg .jinjia-all {
+  position: absolute;
+  top: 24rpx;
+  left: 400rpx;
+  color: #77777a;
+}
+.foot-bg .finish {
+  position: absolute;
+  top: 24rpx;
+  right: 24rpx;
+}

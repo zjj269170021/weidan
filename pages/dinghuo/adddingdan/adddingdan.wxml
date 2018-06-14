@@ -25,5 +25,16 @@
     </scroll-view>
 </view>
 <view class="foot-bg">
-
+    <view class="gouwuche rich">
+        <image class="off" src="../../../images/xcx_cart_off.png"></image>
+        <image class="on" src="../../../images/xcx_cart_on.png"></image>
+        <view class="number">0</view>
+    </view>
+    <view class="shoujia-all">
+        ￥0.0
+    </view>
+    <view class="jinjia-all">
+        进价{{'￥0.0'}}
+    </view>
+    <button class="finish" type="primary" size="mini">完成</button>
 </view>

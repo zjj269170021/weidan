@@ -1,4 +1,87 @@
 @import "../../../common/common.less";
+//右侧列表样式
+._border-bottom-one{
+    border-bottom: 1px solid #ebebeb;
+}
+._item{
+    .pic{
+        width: @size * 75;
+        height: @size * 75;
+        border-radius: @bdrs; 
+        background: red;
+    }
+    >text{
+        position: absolute;
+        left: @pd-s + @size * 75 + @pd-s;
+    } 
+    >image{
+        position: absolute;
+    }
+    .name{
+        
+    }
+    .tag{
+        top: @size * 40;
+        height: @size * 20;
+        line-height: @size * 20;
+        padding: 0 @size * 6; 
+        font-size: @fs-xs;
+        border-radius: @bdrs;
+    }
+    .tag.level-a{
+        background: red;
+        color: #fff;
+    }
+    .shoujia{
+        top: @size * 65;
+        color: #d8243c;
+    }
+    .jinjia{
+        left: @pd-s + @size * 75 + @pd-s + @size * 80;
+        top: @size * 68;
+        font-size: @fs-s;
+    }
+    .shangjia{
+        top: @size * 100; 
+        font-size: @fs-xs;
+        color: @fl-hui;
+        .tag{
+            display: inline-block;
+            background: #fff1ee;
+            border: 1 solid #e6b8bd;
+            color: #e6b8bd;
+            margin-right: @pd-s;
+            padding: 0 @size * 4;
+            border-radius: @bdrs;
+        }
+    }
+    .beizhu{
+        top: @size * 125;
+        font-size: @fs-xs;
+        color: @fl-hui;
+        .tag{
+            background: #fffdeb;
+            border: 1 solid #eed9bf;
+            color: #eed9bf;
+            margin-right: @pd-s;
+            padding: 0 @size * 4;
+            border-radius: @bdrs;
+        }
+    }
+    .add{
+        width: @size * 30;
+        height: @size * 30;
+        top: @size * 35;
+        right: @pd-s;
+    }
+    .edit{
+        width: @size * 16;
+        height: @size * 16;
+        right: @pd-s + @size * 7;
+        bottom: @pd-s;
+    }
+}
+
 .head-bg{
     font-size: @fs-s;
     line-height: 56rpx;
@@ -38,8 +121,8 @@
         color: #77777a;
         .item{
             padding: @pd-s;
-            height: 36px - @pd-s;
-            line-height: 36px - @pd-s;
+            height: 36px;
+            line-height: 36px;
             font-size: @fs-s;
         }
         .item.sel{
@@ -55,84 +138,9 @@
         .item{
             position: relative;
             padding: @pd-s;
-            height: @size * 136;
+            height: @size * 154;
             border-bottom: 1px solid #ebebeb;
-            .pic{
-                width: @size * 75;
-                height: @size * 75;
-                border-radius: @bdrs; 
-                background: red;
-            }
-            >text{
-                position: absolute;
-                left: @pd-s + @size * 75 + @pd-s;
-            } 
-            >image{
-                position: absolute;
-            }
-            .name{
-                
-            }
-            .tag{
-                top: @size * 40;
-                height: @size * 20;
-                line-height: @size * 20;
-                padding: 0 @size * 6; 
-                font-size: @fs-xs;
-                border-radius: @bdrs;
-            }
-            .tag.level-a{
-                background: red;
-                color: #fff;
-            }
-            .shoujia{
-                top: @size * 65;
-                color: #d8243c;
-            }
-            .jinjia{
-                left: @pd-s + @size * 75 + @pd-s + @size * 80;
-                top: @size * 68;
-                font-size: @fs-s;
-            }
-            .shangjia{
-                top: @size * 100; 
-                font-size: @fs-xs;
-                color: @fl-hui;
-                .tag{
-                    display: inline-block;
-                    background: #fff1ee;
-                    border: 1 solid #e6b8bd;
-                    color: #e6b8bd;
-                    margin-right: @pd-s;
-                    padding: 0 @size * 4;
-                    border-radius: @bdrs;
-                }
-            }
-            .beizhu{
-                top: @size * 125;
-                font-size: @fs-xs;
-                color: @fl-hui;
-                .tag{
-                    background: #fffdeb;
-                    border: 1 solid #eed9bf;
-                    color: #eed9bf;
-                    margin-right: @pd-s;
-                    padding: 0 @size * 4;
-                    border-radius: @bdrs;
-                }
-            }
-            .add{
-                width: @size * 30;
-                height: @size * 30;
-                top: @size * 35;
-                right: @pd-s;
-            }
-            .edit{
-                width: @size * 16;
-                height: @size * 16;
-                right: @pd-s + @size * 7;
-                bottom: @pd-s;
-            }
+            ._item
         }
     }
 }
@@ -191,4 +199,39 @@
         top: @pd-s;
         right: @pd-s;
     }
+}
+/*使屏幕变暗  */
+.commodity_screen {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+  /*对话框 */
+.itemAddChoose {
+    height: @size * 300;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: #fff;
+    .close {
+        position: absolute;
+        top: @pd-s + @size * 7;
+        right: @pd-s;
+        z-index: 3;
+    }
+    .item {
+        position: relative;
+        padding: @pd-s;
+        ._border-bottom-one;
+        ._item;
+        height: @size * 100;
+    }
+
 }

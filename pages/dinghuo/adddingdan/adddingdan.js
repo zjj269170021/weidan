@@ -1,6 +1,32 @@
 //index.js
 //获取应用实例
 const app = getApp();
+
+app.globalData.topItemList = [{
+        id: 1,
+        name: '新风水果批发行'
+    },
+    {
+        id: 2,
+        name: '高翔弄副批发行'
+    },
+    {
+        id: 3,
+        name: '郭太师西瓜批发行'
+    },
+    {
+        id: 4,
+        name: '新风水果批发行'
+    },
+    {
+        id: 5,
+        name: '高翔弄副批发行'
+    },
+    {
+        id: 6,
+        name: '郭太师西瓜批发行'
+    }
+]
 app.globalData.leftItemList = [{
         id: 1,
         name: '香蕉'
@@ -57,10 +83,36 @@ app.globalData.rightItemList = [{
         type: '1'
     }
 ]
+app.globalData.animation = wx.createAnimation({
+    transformOrigin: "50% 50%",
+    duration: 400,
+    timingFunction: "linear",
+    delay: 0
+})
 Page({
     data: {
+        topItemList: app.globalData.topItemList,
         leftItemList: app.globalData.leftItemList,
-        rightItemList: app.globalData.rightItemList
+        rightItemList: app.globalData.rightItemList,
+        shoppingCart: []
+    },
+    onLoad: function() {
+        var animation = wx.createAnimation({
+            transformOrigin: "50% 50%",
+            duration: 400,
+            timingFunction: "linear",
+            delay: 0
+        })
+        this.animation = animation
+        animation.translateY('300vh').step()
+        this.setData({
+            animationData: animation.export(),
+        })
+        setTimeout(() => {
+            this.setData({
+                show: false
+            })
+        }, 400);
     },
     //事件处理函数
     bindViewTap: function() {
@@ -68,12 +120,28 @@ Page({
             url: '../logs/logs'
         })
     },
-    getUserInfo: function(e) {
-        console.log(e)
-        app.globalData.userInfo = e.detail.userInfo
+    addToShoppingCart: function(e) {
+        console.log(e.target.dataset.item);
+        let { shoppingCart } = this.data;
+        shoppingCart.push(e.target.dataset.item);
         this.setData({
-            userInfo: e.detail.userInfo,
-            hasUserInfo: true
+            shoppingCart: shoppingCart
+        })
+    },
+    //显示遮罩
+    showMask: function () {
+        this.animation.translateY('0').step()
+        this.setData({
+            animationData: this.animation.export(),
+            show: true
+        })
+    },
+    //隐藏遮罩
+    hideMask: function () {
+        this.animation.translateY('300vh').step()
+        this.setData({
+            animationData: this.animation.export(),
+            show: false
         })
     }
 })

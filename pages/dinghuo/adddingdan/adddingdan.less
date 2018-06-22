@@ -206,6 +206,7 @@
     position: fixed;
     left: 0;
     top: 0;
+    bottom: @size * 80;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
@@ -213,13 +214,17 @@
 }
   /*对话框 */
 .itemAddChoose {
-    height: @size * 300;
+    height: @size * 320;
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 2;
     background: #fff;
+    > view {
+        ._border-bottom-one;
+        padding: @pd-s;
+    }
     .close {
         position: absolute;
         top: @pd-s + @size * 7;
@@ -229,9 +234,55 @@
     .item {
         position: relative;
         padding: @pd-s;
-        ._border-bottom-one;
         ._item;
         height: @size * 100;
+    }
+    .standard{
+        padding: @pd-s/2 @pd-s;
+        height: @size * 80;
+        > .text{
+            text-align:center;
+            font-size: @fs-xs;
+            color: #77777a;
+            margin-bottom: @pd-s/2;
+        }
+        > .button-text{
+            display: inline-block;
+            font-size: @fs-s;
+            margin-right: @size * 22;
+            .button{
+                width: @size * 70;
+                height: @size * 25;
+                line-height: @size * 23;
+                text-align: center;
+                ._button-border;
+            }
+            .button.sel{
+                background: @fl-lan;
+                color: #fff;
+                border: 0;
+            }
+            .text{
+                width: @size * 70;
+                text-align: center;
+                font-size: @fs-xs;
+                color: #77777a; 
+            }
+        }
+        > .button-text:last-child {
+            margin-right: 0;
+        }
+    }
+    .section {
+        .section-text {
+            font-size: @fs-xs;
+        }
+    }
+    .button.finish {
+        display: inline-block;
+        background: @fl-lan;
+        color: #fff;
+        ._button-border
     }
 
 }

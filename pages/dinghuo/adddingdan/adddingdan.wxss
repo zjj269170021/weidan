@@ -1,3 +1,7 @@
+._button-border {
+  border: 1px solid #adb0b0;
+  border-radius: 5px;
+}
 ._border-bottom-one {
   border-bottom: 1px solid #ebebeb;
 }
@@ -267,6 +271,7 @@
   position: fixed;
   left: 0;
   top: 0;
+  bottom: 160rpx;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -274,13 +279,17 @@
 }
 /*对话框 */
 .itemAddChoose {
-  height: 600rpx;
+  height: 640rpx;
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 2;
   background: #fff;
+}
+.itemAddChoose > view {
+  border-bottom: 1px solid #ebebeb;
+  padding: 24rpx;
 }
 .itemAddChoose .close {
   position: absolute;
@@ -291,7 +300,6 @@
 .itemAddChoose .item {
   position: relative;
   padding: 24rpx;
-  border-bottom: 1px solid #ebebeb;
   height: 200rpx;
 }
 .itemAddChoose .item .pic {
@@ -366,4 +374,51 @@
   height: 32rpx;
   right: 38rpx;
   bottom: 24rpx;
+}
+.itemAddChoose .standard {
+  padding: 12rpx 24rpx;
+  height: 160rpx;
+}
+.itemAddChoose .standard > .text {
+  text-align: center;
+  font-size: 24rpx;
+  color: #77777a;
+  margin-bottom: 12rpx;
+}
+.itemAddChoose .standard > .button-text {
+  display: inline-block;
+  font-size: 30rpx;
+  margin-right: 44rpx;
+}
+.itemAddChoose .standard > .button-text .button {
+  width: 140rpx;
+  height: 50rpx;
+  line-height: 46rpx;
+  text-align: center;
+  border: 1px solid #adb0b0;
+  border-radius: 5px;
+}
+.itemAddChoose .standard > .button-text .button.sel {
+  background: #0597ff;
+  color: #fff;
+  border: 0;
+}
+.itemAddChoose .standard > .button-text .text {
+  width: 140rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #77777a;
+}
+.itemAddChoose .standard > .button-text:last-child {
+  margin-right: 0;
+}
+.itemAddChoose .section .section-text {
+  font-size: 24rpx;
+}
+.itemAddChoose .button.finish {
+  display: inline-block;
+  background: #0597ff;
+  color: #fff;
+  border: 1px solid #adb0b0;
+  border-radius: 5px;
 }

@@ -1,7 +1,8 @@
 {
 	"pages": [
-		"pages/dinghuo/adddingdan/adddingdan",
 		"pages/dinghuo/dinghuo",
+		"pages/dinghuo/adddingdan/adddingdan",
+		
 		"pages/dingdan/dingdan",
 		"pages/wode/wode",
 		"pages/logs/logs",
@@ -17,7 +18,7 @@
 	"tabBar": {
 		"list": [
 			{
-				"pagePath": "pages/dinghuo/adddingdan/adddingdan",
+				"pagePath": "pages/dinghuo/dinghuo",
 				"text": "订货",
 				"iconPath": "images/xcx_nav01_off.png",
 				"selectedIconPath": "images/xcx_nav01_on.png"

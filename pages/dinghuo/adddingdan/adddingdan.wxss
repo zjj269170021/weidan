@@ -217,6 +217,8 @@
 }
 .foot-bg .gouwuche {
   position: relative;
+  width: 120rpx;
+  height: 80rpx;
 }
 .foot-bg .gouwuche > image {
   width: 80rpx;
@@ -252,18 +254,20 @@
   top: 24rpx;
   left: 180rpx;
   color: #d8243c;
-  font-size: 42rpx;
+  font-size: 30rpx;
 }
 .foot-bg .jinjia-all {
   position: absolute;
   top: 24rpx;
-  left: 400rpx;
+  right: 320rpx;
   color: #77777a;
+  font-size: 30rpx;
 }
 .foot-bg .finish {
   position: absolute;
   top: 24rpx;
   right: 24rpx;
+  width: 200rpx;
 }
 /*使屏幕变暗  */
 .commodity_screen {
@@ -272,17 +276,16 @@
   left: 0;
   top: 0;
   bottom: 160rpx;
-  height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
-/*对话框 */
+/*选择商品弹出框 */
 .itemAddChoose {
   height: 640rpx;
   width: 100%;
   position: fixed;
-  bottom: 0;
+  bottom: -160rpx;
   left: 0;
   z-index: 2;
   background: #fff;
@@ -421,4 +424,94 @@
   color: #fff;
   border: 1px solid #adb0b0;
   border-radius: 5px;
+}
+.shoppingCart {
+  height: 700rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: #fff;
+}
+.shoppingCart .title {
+  height: 90rpx;
+  background: #dee2e6;
+  padding: 24rpx;
+  font-size: 36rpx;
+  color: #77777a;
+}
+.shoppingCart .title .clear-all {
+  display: inline-block;
+  position: absolute;
+  right: 24rpx;
+  font-size: 30rpx;
+}
+.shoppingCart .title .clear-all image {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 6rpx;
+  left: -40rpx;
+}
+.shoppingCart .shoppingCart-item-list {
+  height: 610rpx;
+}
+.shoppingCart .shoppingCart-item-list .item {
+  position: relative;
+  height: 140rpx;
+  border-bottom: 1px solid #ebebeb;
+  padding: 24rpx;
+}
+.shoppingCart .shoppingCart-item-list .item > text {
+  position: absolute;
+}
+.shoppingCart .shoppingCart-item-list .item image {
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+}
+.shoppingCart .shoppingCart-item-list .item .name {
+  font-size: 30rpx;
+}
+.shoppingCart .shoppingCart-item-list .item .name .standard {
+  font-size: 24rpx;
+  color: #77777a;
+}
+.shoppingCart .shoppingCart-item-list .item .shoujia {
+  right: 250rpx;
+  top: 34rpx;
+  font-size: 24rpx;
+  color: #d8243c;
+}
+.shoppingCart .shoppingCart-item-list .item .jinjia {
+  right: 250rpx;
+  top: 70rpx;
+  font-size: 24rpx;
+}
+.shoppingCart .shoppingCart-item-list .item .shangjia {
+  top: 70rpx;
+  font-size: 24rpx;
+  color: #77777a;
+}
+.shoppingCart .shoppingCart-item-list .item .shangjia .tag {
+  display: inline-block;
+  background: #fff1ee;
+  border: 1 solid #e6b8bd;
+  color: #e6b8bd;
+  margin-right: 24rpx;
+  padding: 0 8rpx;
+  border-radius: 5px;
+}
+.shoppingCart .shoppingCart-item-list .item .reduce {
+  top: 40rpx;
+  right: 160rpx;
+}
+.shoppingCart .shoppingCart-item-list .item .num {
+  top: 44rpx;
+  right: 110rpx;
+}
+.shoppingCart .shoppingCart-item-list .item .add {
+  top: 40rpx;
+  right: 24rpx;
 }

@@ -101,8 +101,27 @@ app.globalData.animation = wx.createAnimation({
     timingFunction: "linear",
     delay: 0
 })
+const standardDef = {
+    1: {
+        name: '称斤',
+        num: 1
+    },
+    10: {
+        name: '小箱',
+        num: 10
+    },
+    20: {
+        name: '中箱',
+        num: 20
+    },
+    30: {
+        name: '大箱',
+        num: 30
+    },
+}
 Page({
     data: {
+        standardDef: standardDef,
         topItemList: app.globalData.topItemList,
         leftItemList: app.globalData.leftItemList,
         rightItemList: app.globalData.rightItemList,
@@ -206,7 +225,7 @@ Page({
         if (this.data.shoppingCart.length == 0) {
             return;
         }
-        this.animation2.translateY('0').step()
+        this.animation2.translateY('0vh').step()
         this.setData({
             animationData2: this.animation2.export(),
         })
@@ -218,4 +237,51 @@ Page({
             animationData2: this.animation2.export(),
         })
     },
+    //购物车中减少数量
+    cartReduce: function(e) {
+        let { shoppingCart, allshoujia, alljinjia } = this.data;
+        let cart = shoppingCart[e.target.dataset.index];
+        let num = cart.num;
+        if (num > 1) {
+            cart.num -= 1;
+        } else {
+            shoppingCart.splice(e.target.dataset.index, 1);
+            if (shoppingCart.length == 0) {
+                this.hideMask2();
+            }
+        }
+        this.setData({
+            shoppingCart: shoppingCart,
+            allshoujia: allshoujia - cart.item.shoujia * cart.standard,
+            alljinjia: alljinjia - cart.item.jinjia * cart.standard
+        });
+    },
+    //购物车中增加数量
+    cartAdd: function(e) {
+        let { shoppingCart, allshoujia, alljinjia } = this.data;
+        let cart = shoppingCart[e.target.dataset.index];
+        cart.num += 1;
+        this.setData({
+            shoppingCart: shoppingCart,
+            allshoujia: allshoujia + cart.item.shoujia * cart.standard,
+            alljinjia: alljinjia + cart.item.jinjia * cart.standard
+        });
+    },
+    //清空购物车
+    emptyShoppingCart: function() {
+        wx.showModal({
+            title: '',
+            content: '是否确定清空购物车？',
+            success: (res) => {
+                if (res.confirm) {
+                    this.setData({
+                        shoppingCart: [],
+                        allshoujia: 0,
+                        alljinjia: 0
+                    });
+                    this.hideMask2();
+                } 
+            }
+        })
+    }
 })

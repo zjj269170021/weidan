@@ -28,13 +28,9 @@
         <image class="on" src="../../../images/xcx_cart_on.png"></image>
         <view class="number">{{shoppingCart.length}}</view>
     </view>
-    <view class="shoujia-all">
-        ￥{{allshoujia}}
-    </view>
-    <view class="jinjia-all">
-        进价￥{{alljinjia}}
-    </view>
-    <button class="finish" type="primary" size="mini">完成</button>
+    <text class="shoujia-all">售价 \n ￥{{allshoujia}}</text>
+    <text class="jinjia-all">进价 \n ￥{{alljinjia}}</text>
+    <button class="finish" type="primary">完成</button>
 </view>
 
 <!-- 屏幕背景变暗的背景  -->
@@ -80,4 +76,21 @@
 </view>
 <view animation="{{animationData2}}" class="commodity_screen" bindtap="hideMask2" style="visibility:{{show ? 'visible':'hidden'}}">
         <!--弹出框  -->
+        <view class="shoppingCart" catchtap="no"> 
+            <view class="title">
+                <text>已选商品</text>
+                <view class="clear-all" bindtap="emptyShoppingCart"><image class="off" src="../../../images/xcx_binIcon.png"></image>清空</view>
+            </view>
+            <scroll-view class="shoppingCart-item-list" scroll-y>
+                <view class="item" wx:for="{{shoppingCart}}" wx:for-item="cart" wx:key="id">
+                    <text class="name">{{cart.item.name}} <text class="standard">{{standardDef[cart.standard].name}}（{{cart.standard}}斤）</text></text>
+                    <text class="shangjia"><text class="tag">商家</text>新风水果批发行</text>
+                    <text class="shoujia">￥{{cart.item.shoujia * cart.standard * cart.num}}</text>
+                    <text class="jinjia">￥{{cart.item.jinjia * cart.standard * cart.num}}</text>
+                    <image class="reduce" src="../../../images/xcx_cart_sub.png" bindtap="cartReduce" data-index="{{index}}"></image>
+                    <text class="num">{{cart.num}}</text>
+                    <image class="add" src="../../../images/xcx_cart_add.png" bindtap="cartAdd" data-index="{{index}}"></image>
+                </view>
+            </scroll-view>
+        </view>
 </view>

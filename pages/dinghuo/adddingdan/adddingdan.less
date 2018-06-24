@@ -149,6 +149,8 @@
     padding: @pd-s;
     .gouwuche{
         position: relative;
+        width: @size *60;
+        height: @size * 40;
         >image{
             width: @size * 40;
             height: @size *40;
@@ -186,18 +188,20 @@
         top: @pd-s;
         left: @size * 90;
         color: #d8243c;
-        font-size: @fs-l;
+        font-size: @fs-s;
     }
     .jinjia-all{
         position: absolute;
         top: @pd-s;
-        left: @size * 200;
+        right: @size * 160;
         color: @fl-hui;
+        font-size: @fs-s;
     }
     .finish{
         position: absolute;
         top: @pd-s;
         right: @pd-s;
+        width: @size * 100;
     }
 }
 /*使屏幕变暗  */
@@ -207,17 +211,17 @@
     left: 0;
     top: 0;
     bottom: @size * 80;
-    height: 100%;
+    // height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
-  /*对话框 */
+  /*选择商品弹出框 */
 .itemAddChoose {
     height: @size * 320;
     width: 100%;
     position: fixed;
-    bottom: 0;
+    bottom: -@size * 80;
     left: 0;
     z-index: 2;
     background: #fff;
@@ -284,5 +288,96 @@
         color: #fff;
         ._button-border
     }
+}
+//购物车弹出框
+.shoppingCart {
+    height: @size * 350;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: #fff; 
+    .title {
+        height: @size * 45;
+        background:#dee2e6;
+        padding: @pd-s;
+        font-size: @fs-m;
+        color: @fl-hui;
+        .clear-all {
+            image{
+                width: @size * 15;
+                height: @size * 15;
+                position:absolute;
+                top: @size * 3;
+                left: -@size * 20
 
+            }
+            display: inline-block;
+            position: absolute;
+            right: @pd-s;
+            font-size: @fs-s;
+        }
+    }
+    .shoppingCart-item-list{
+        height: @size * 305;
+        .item{
+            position: relative;
+            height: @size * 70;
+            ._border-bottom-one;
+            padding: @pd-s;
+            > text{
+                position: absolute;
+            }
+            image{
+                position: absolute;
+                width: @size * 30;
+                height: @size * 30;
+            }
+            .name{
+                font-size: @fs-s;
+                .standard{
+                    font-size: @fs-xs;
+                    color: @fl-hui;
+                }
+            }
+            .shoujia{
+                right: @size * 125;
+                top: @size * 17;
+                font-size: @fs-xs;
+                color: #d8243c;
+            }
+            .jinjia{
+                right: @size * 125;
+                top: @size * 35;
+                font-size: @fs-xs;
+            }
+            .shangjia{
+                top: @size * 35;
+                font-size: @fs-xs;
+                color: @fl-hui;
+                .tag{
+                    display: inline-block;
+                    background: #fff1ee;
+                    border: 1 solid #e6b8bd;
+                    color: #e6b8bd;
+                    margin-right: @pd-s;
+                    padding: 0 @size * 4;
+                    border-radius: @bdrs;
+                }
+            }
+            .reduce{
+                top: @size * 20;
+                right: @size * 80;
+            }
+            .num {
+                top: @size * 22;
+                right: @size * 55;
+            }
+            .add{
+                top: @size * 20;
+                right: @pd-s;
+            }
+        }
+    }
 }
